@@ -1,0 +1,24 @@
+{
+    "name": "@hokojs/playground",
+    "version": "0.0.0",
+    "description": "Playground for hoko.",
+    "type": "module",
+    "private": true,
+    "author": "mrozio13pl",
+    "license": "MIT",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "dependencies": {
+        "hoko": "workspace:*",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@types/react": "^19.0.3",
+        "@types/react-dom": "^19.0.2",
+        "@vitejs/plugin-react-swc": "^3.7.2",
+        "vite": "^6.0.7"
+    }
+}

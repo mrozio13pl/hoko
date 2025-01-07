@@ -1,0 +1,61 @@
+{
+    "name": "hoko",
+    "version": "0.0.0",
+    "description": "The jQuery for React",
+    "type": "module",
+    "repository": "mrozio13pl/hoko",
+    "author": "mrozio13pl",
+    "license": "MIT",
+    "main": "./dist/index.mjs",
+    "types": "./dist/index.d.mts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/index.d.mts",
+                "default": "./dist/index.mjs"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        }
+    },
+    "scripts": {
+        "build": "pkgroll --clean-dist",
+        "lint": "oxlint",
+        "types": "attw . -P"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "hoko",
+        "react",
+        "state",
+        "hooks",
+        "jquery"
+    ],
+    "devDependencies": {
+        "@arethetypeswrong/cli": "^0.17.2",
+        "@types/node": "^22.10.5",
+        "@types/react": "^19.0.3",
+        "@types/react-dom": "^19.0.2",
+        "oxlint": "^0.15.5",
+        "pkgroll": "^2.6.1",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "typescript": "^5.7.2"
+    },
+    "peerDependencies": {
+        "@types/react": ">=18",
+        "react": ">=18"
+    },
+    "peerDependenciesMeta": {
+        "@types/react": {
+            "optional": true
+        },
+        "react": {
+            "optional": true
+        }
+    }
+}
