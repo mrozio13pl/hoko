@@ -1,6 +1,6 @@
 {
     "name": "hoko",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "The jQuery for React",
     "type": "module",
     "repository": "mrozio13pl/hoko",
