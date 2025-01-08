@@ -36,10 +36,10 @@ function Component() {
 Install hoko from `npm` with your package manager of your choice:
 
 ```bash
-npm install zod       # npm
-yarn add zod          # yarn
-bun add zod           # bun
-pnpm add zod          # pnpm
+npm install hoko      # npm
+yarn add hoko         # yarn
+bun add hoko          # bun
+pnpm add hoko         # pnpm
 ```
 
 ## API
