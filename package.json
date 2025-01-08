@@ -22,6 +22,7 @@
     },
     "scripts": {
         "build": "pkgroll --clean-dist",
+        "test": "vitest run",
         "lint": "oxlint",
         "types": "attw . -P"
     },
@@ -37,14 +38,18 @@
     ],
     "devDependencies": {
         "@arethetypeswrong/cli": "^0.17.2",
+        "@testing-library/react": "^16.1.0",
         "@types/node": "^22.10.5",
         "@types/react": "^19.0.3",
         "@types/react-dom": "^19.0.2",
+        "happy-dom": "^16.5.2",
         "oxlint": "^0.15.5",
         "pkgroll": "^2.6.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
-        "typescript": "^5.7.2"
+        "typescript": "^5.7.2",
+        "vite-tsconfig-paths": "^5.1.4",
+        "vitest": "^2.1.8"
     },
     "peerDependencies": {
         "@types/react": ">=18",
