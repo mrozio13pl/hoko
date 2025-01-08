@@ -56,6 +56,10 @@ const state = $.state({
     count: 0,
 });
 
+$.effect(() => {
+    console.log(state.count);
+}, [state.count]); // the state as a dependency
+
 console.log(state.count); // 0
 state.count = 1; // updating the state
 ```
