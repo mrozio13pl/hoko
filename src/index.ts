@@ -1,6 +1,7 @@
 export * from '@/helpers/state';
 export * from '@/helpers/global';
 export * from '@/helpers/ref';
+export * from '@/helpers/rerender';
 export * from '@/shared';
 
 // Re-export shortcuts

@@ -101,6 +101,18 @@ function Component() {
 
 Alternatively, you can use the `createGlobals` exported from `hoko`.
 
+### Helpers
+
+##### `$.rerender()`
+
+A function that can be used to force a re-render of a component.
+
+```tsx
+const rerender = $.rerender();
+
+rerender();
+```
+
 ### Shorthands
 
 ##### `$.ref`
