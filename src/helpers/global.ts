@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 
+export type Listener = React.Dispatch<React.SetStateAction<number>>;
+
 export function createGlobals<T extends Record<string, any>>(state: T) {
-    const listeners = new Set<React.Dispatch<React.SetStateAction<number>>>();
+    const listeners = new Set<Listener>();
 
     const proxyState = new Proxy(state, {
         get(target, prop) {
@@ -15,7 +17,31 @@ export function createGlobals<T extends Record<string, any>>(state: T) {
         },
     });
 
-    return function useGlobalState() {
+    const subscribe = () => {
+        const listener = useState(0)[1];
+
+        listeners.add(listener);
+
+        // unsubscribe
+        return () => {
+            listeners.delete(listener);
+        };
+    };
+
+    const setState = (state: T): void => {
+        Object.entries(state).forEach(([key, value]) => {
+            proxyState[key as keyof T] = value;
+        });
+    };
+
+    const api = {
+        getState: () => proxyState,
+        setState,
+        initialState: state,
+        subscribe,
+    } as const;
+
+    function useGlobalState() {
         const setSignal = useState(0)[1];
 
         useEffect(() => {
@@ -26,7 +52,9 @@ export function createGlobals<T extends Record<string, any>>(state: T) {
         }, []);
 
         return proxyState;
-    };
+    }
+
+    return Object.assign(useGlobalState, api);
 }
 
 export { createGlobals as globals };
