@@ -24,7 +24,8 @@
         "build": "pkgroll --clean-dist",
         "test": "vitest run",
         "lint": "oxlint",
-        "types": "attw . -P"
+        "types": "attw . -P",
+        "changelog": "chng"
     },
     "files": [
         "dist"
@@ -42,6 +43,7 @@
         "@types/node": "^22.12.0",
         "@types/react": "^19.0.8",
         "@types/react-dom": "^19.0.3",
+        "chng": "^0.1.0",
         "happy-dom": "^16.8.1",
         "oxlint": "^0.15.8",
         "pkgroll": "^2.6.1",
