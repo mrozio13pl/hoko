@@ -37,19 +37,19 @@
         "jquery"
     ],
     "devDependencies": {
-        "@arethetypeswrong/cli": "^0.17.2",
-        "@testing-library/react": "^16.1.0",
-        "@types/node": "^22.10.5",
-        "@types/react": "^19.0.3",
-        "@types/react-dom": "^19.0.2",
-        "happy-dom": "^16.5.2",
-        "oxlint": "^0.15.5",
+        "@arethetypeswrong/cli": "^0.17.3",
+        "@testing-library/react": "^16.2.0",
+        "@types/node": "^22.12.0",
+        "@types/react": "^19.0.8",
+        "@types/react-dom": "^19.0.3",
+        "happy-dom": "^16.8.1",
+        "oxlint": "^0.15.8",
         "pkgroll": "^2.6.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
-        "typescript": "^5.7.2",
+        "typescript": "^5.7.3",
         "vite-tsconfig-paths": "^5.1.4",
-        "vitest": "^2.1.8"
+        "vitest": "^3.0.4"
     },
     "peerDependencies": {
         "@types/react": ">=18",
@@ -62,5 +62,11 @@
         "react": {
             "optional": true
         }
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "esbuild",
+            "@swc/core"
+        ]
     }
 }
